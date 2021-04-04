@@ -1,8 +1,9 @@
 {
-  "testFiles": "*cy.*",
-  "componentFolder": "src/components",
+  "testFiles": "**/*cy.*",
+  "componentFolder": "src",
   "supportFile": "cypress/support.js",
   "fixturesFolder": false,
   "pluginsFile": "cypress/plugins.js",
-  "viewportHeight": 500
+  "viewportHeight": 500,
+  "defaultCommandTimeout": 100
 }

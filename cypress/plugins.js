@@ -3,17 +3,23 @@ const WindiCSS = require('vite-plugin-windicss').default
 
 
 module.exports = (on, config) => {
-  on('dev-server:start', (options) => {
-    const viteConfig = {
-      plugins: [
-        WindiCSS()
-      ]
+  const viteConfig = {
+    plugins: [
+      WindiCSS()
+    ]
+  }
+  
+  viteConfig.esbuild = viteConfig.esbuild || {}
+  viteConfig.esbuild.jsxFactory = 'h'
+  viteConfig.esbuild.jsxFragment = 'Fragment'
+  viteConfig.logLevel = 'error'
+  viteConfig.resolve = {
+    alias: {
+      'vue': 'vue/dist/vue.esm-bundler.js'
     }
-    viteConfig.esbuild = viteConfig.esbuild || {}
-    viteConfig.esbuild.jsxFactory = 'h'
-    viteConfig.esbuild.jsxFragment = 'Fragment'
-    viteConfig.logLevel = 'error'
-
+  }
+  
+  on('dev-server:start', (options) => {
     return startDevServer({ options, viteConfig })
   })
   return config
