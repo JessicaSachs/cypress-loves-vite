@@ -1,0 +1,8 @@
+{
+  "testFiles": "*cy.*",
+  "componentFolder": "src/components",
+  "supportFile": "cypress/support.js",
+  "fixturesFolder": false,
+  "pluginsFile": "cypress/plugins.js",
+  "viewportHeight": 500
+}
