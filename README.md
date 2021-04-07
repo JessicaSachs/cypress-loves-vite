@@ -34,13 +34,15 @@ yarn cy
 
 **MyNewComponent.cy.js**
 
-```
+```js
 import { mount } from '@cypress/vue'
 import MyNewComponent from './MyNewComponent.vue' // keep the .vue, Vite needs it
 
 describe('MyNewComponent', () => {
   it('renders', () => {
-    mount(MyNewComponent).get('h1').should('have.text', 'Hello world')
+    mount(MyNewComponent)
+      .get('h1')
+      .should('have.text', 'Hello world')
   })
 })
 ```
