@@ -1,8 +1,8 @@
 <template>
   <!-- fade in -->
   <transition name="fade">
-  <div :class="['modal', 'fade', visible && 'visible']" key="modal">
-    <div class="content"  v-if="visible" key="modal">
+  <div :class="['modal']" key="modal" v-show="visible">
+    <div class="content"  key="modal">
       <div class="header-image" />
 
       <!-- This form should not trigger a full-page refresh! -->
@@ -123,38 +123,17 @@ form {
 }
 </style>
 
-
-
 <style scoped>
-.fade {
-  transition:all 0.3s ease;
-  opacity:0.5;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
 }
-.fade.visible {
-  opacity:1;
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <style scoped>
 .header-image {
