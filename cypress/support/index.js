@@ -1,6 +1,6 @@
 import 'virtual:windi.css'
 import 'virtual:windi-devtools'
-import '../src/index.css'
+import '../../src/index.css'
 
 beforeEach(() => {
   cy.viewport(600, 600, { log: false })

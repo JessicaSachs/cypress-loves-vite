@@ -4,4 +4,17 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  padding: 2rem;
+}
+
+h2 {
+  @apply text-2xl text-left pb-10;
+}
+
+button {
+  @apply rounded-sm font-black text-white p-3 w-100 mt-2 bg-emerald-700;
+}
+
+p {
+  @apply my-4;
 }
