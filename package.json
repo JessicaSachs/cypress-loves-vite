@@ -1,5 +1,5 @@
 {
-  "name": "cy-grubhub",
+  "name": "cypress-loves-vite",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
